@@ -1,0 +1,37 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php
+
+###Force HTTPS###
+
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+###IP Canonicalization###
+
+RewriteCond %{HTTP_HOST} ^208\.97\.177\.160
+RewriteRule (.*) https://shiburn.io/$1 [R=301,L]
+
+###End IP Canonicalization###
+
+RewriteCond %{PHP_HOST}   !^www\.shiburn\.io [NC]
+RewriteCond %{PHP_HOST}   !^$
+RewriteRule ^/(.*)         https://shiburn.io/$1 [L,R=301]
+
+Options -Multiviews
+Options +FollowSymLinks
+
+#ErrorDocument 400 https://www.shiburn.io/error
+#ErrorDocument 401 https://www.shiburn.io/error
+#ErrorDocument 403 https://www.shiburn.io/error
+#ErrorDocument 404 https://www.shiburn.io/error
+#ErrorDocument 500 https://www.shiburn.io/error
+
+Options -Indexes
+
+<Files ~ “^.*\.([Hh][Tt][Aa])”>
+order allow,deny
+deny from all
+satisfy all
+</Files>

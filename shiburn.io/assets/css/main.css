@@ -1,0 +1,64 @@
+* {
+    font-family: Arial, Verdana, Helvetica;
+    color: #333;
+    size: 18px;
+    line-height: 2em;
+}
+
+body {
+    background-image: url(#);
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: #f2f2f2;
+}
+
+.logo {
+    position: relative;
+    margin: 0% auto;
+    height: 75px;
+    width: auto;
+}
+
+p {
+    position: relative;
+    margin: 0% auto;
+    padding: 5px;
+}
+
+a, a:visited {
+    color: #0073ec;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #333;
+}
+
+.wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 90vh;
+    max-width: 90vw;
+}
+
+.gallery {
+    margin: 25px;
+    display: inline-block;
+    width: 420px;
+    height: 125px;
+}
+
+.card {
+    white-space: initial; /* for text-overflow */
+    width: 420px;
+    height: 125px;
+}
+
+.stats {
+    position: relative;
+    vertical-align: center;
+    text-align: center;
+    border: 2px solid #0073ec;
+    border-radius: 5px;
+    padding: 15px;
+}
