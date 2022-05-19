@@ -7,7 +7,7 @@
         <br />
         All other trademarks and images are property of their respective owners.
 		<br />
-		Powered by: <a href="https://chrisjones.online">chrisjones.online</a>
+		Powered by <a href="https://chrisjones.online">chrisjones.online</a>
         </p>
         </center>
         <br />
