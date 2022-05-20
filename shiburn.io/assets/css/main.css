@@ -1,3 +1,6 @@
+/*
+ global
+*/
 * {
     font-family: Arial, Verdana, Helvetica;
     size: 18px;
@@ -6,13 +9,6 @@
 
 body {
     background-color: #fff;
-}
-
-.logo {
-    position: relative;
-    margin: 0% auto;
-    height: 75px;
-    width: auto;
 }
 
 p {
@@ -26,6 +22,13 @@ a, a:active, a:before, a:after, a:visited {
     text-decoration: none;
 } a:hover {
     text-decoration: underline;
+}
+
+.logo {
+    position: relative;
+    margin: 0% auto;
+    height: 75px;
+    width: auto;
 }
 
 .wrapper {
