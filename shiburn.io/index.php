@@ -1,28 +1,16 @@
-<?php include_once ('assets/php/etherscanApi.php'); ?>
-<?php include_once ('assets/php/jsonArray.php'); ?>
-<?php include_once ('assets/php/variables.php'); ?>
+<?php error_reporting(E_ERROR|E_PARSE); //todo: add exception handler for null inputs, etc. ?>
 <html>
     <head>
         <title>shiburn.io</title>
         <link rel="stylesheet" href="assets/css/main.css">
     </head>
     <body>
+<?php require_once ('assets/php/etherscanApi.php'); ?>
+<?php require_once ('assets/php/jsonArray.php'); ?>
+<?php require_once ('assets/php/variables.php'); ?>
         
         <?php include_once ('assets/php/header.php'); ?>
-        
         <div class="wrapper">
-        
-        <p class="stats">
-            <b>Official Burn Address: </b><a href="https://etherscan.io/token/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce?a=0xdead000000000000000042069420694206942069" target="_blank"><?php echo $burnAddress ?></a>
-            <br />
-            <b>Max Supply: </b><?php echo $maxSupply; ?>
-            <br />
-            <b>Total Amount Burned: </b><?php echo $burnedSupply; echo " (" . $percentBurned . "%)"; ?>
-            <br />
-            <b>Total USD Value: </b><?php echo "≈ $" . $totalUsdValue ?>
-            <br />
-            <b>Total # of Burns: </b><?php echo $numTransactions ?>
-        </p>
         
         <?php
         #############################
@@ -48,7 +36,8 @@
             #START PRINT TRANSACTIONS#
             ##########################
             
-            echo "<div class='gallery'>";
+			
+            echo "<div class='searchable' data-index='$from'>";
             
                 echo "<b>Date: </b>"; echo $date;
                 echo "<br />";
@@ -115,5 +104,6 @@
         <?php include_once ('assets/php/footer.php'); ?>
         </div>
     </body>
+	<script src="assets/js/search.js"></script>
     <script src="assets/js/etherscanApi.js"></script>
 </html>

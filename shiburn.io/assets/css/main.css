@@ -1,14 +1,10 @@
 * {
     font-family: Arial, Verdana, Helvetica;
-    color: #333;
     size: 18px;
     line-height: 2em;
 }
 
 body {
-    background-image: url(#);
-    background-repeat: repeat;
-    background-attachment: fixed;
     background-color: #f2f2f2;
 }
 
@@ -20,18 +16,16 @@ body {
 }
 
 p {
+	margin: 0% auto;
     position: relative;
-    margin: 0% auto;
-    padding: 5px;
+    line-height: 2em;
 }
 
-a, a:visited {
+a, a:active, a:before, a:after, a:visited {
     color: #0073ec;
     text-decoration: none;
-}
-
-a:hover {
-    color: #333;
+} a:hover {
+    text-decoration: underline;
 }
 
 .wrapper {
@@ -41,17 +35,10 @@ a:hover {
     max-width: 90vw;
 }
 
-.gallery {
-    margin: 25px;
-    display: inline-block;
-    width: 420px;
-    height: 125px;
-}
-
 .card {
     white-space: initial; /* for text-overflow */
-    width: 420px;
-    height: 125px;
+    width: 100%;
+    height: auto;
 }
 
 .stats {
@@ -61,4 +48,48 @@ a:hover {
     border: 2px solid #0073ec;
     border-radius: 5px;
     padding: 15px;
+}
+
+/*
+ search
+*/
+.search {
+	width: min(75vw, 500px);
+}
+
+.search_style {
+}
+
+.searchable {
+	margin: 10px;
+    display: inline-block;
+    width: 23em;
+    height: auto;
+}
+
+/*
+verticalAlign
+*/
+.container {
+	background-color: #333;
+	color: #fff;
+	width: 100% auto;
+	padding: 25px;
+} .container b {
+	color: #f2f2f2;
+}
+
+.no-result {
+	text-align: center;
+	height: auto;
+}
+
+.vertical-align-outer {
+	display: table;
+	width: 100%;
+}
+
+.vertical-align {
+	display: table-cell;
+	vertical-align: middle;
 }
