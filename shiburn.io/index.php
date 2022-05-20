@@ -25,7 +25,7 @@
             $date = date('l, m/d/Y, H:i:s ',$result->timeStamp);
             $from = $result->from;
             $burned = number_format($result->value / 1000000000000000000);
-            $usdValue = number_format(($result->value / 1000000000000000000) * 0.000032);
+            $usdValue = number_format(($result->value / 1000000000000000000) * 0.000012);
             $txHash = $result->hash;
             
             ###############
