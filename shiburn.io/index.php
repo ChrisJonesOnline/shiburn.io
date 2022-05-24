@@ -23,7 +23,7 @@
 			
 			$from = $result->from;
 			$burned = number_format($result->value / 1000000000000000000);
-			$usdValue = number_format(($result->value / 1000000000000000000) * 0.000012);
+			$usdValue = number_format(($result->value / 1000000000000000000) * 0.0000116);
 			$txHash = $result->hash;
 					date_default_timezone_set('America/Los_Angeles');
 			$date = date('l, m/d/Y, g:i A',$result->timeStamp);
