@@ -1,4 +1,4 @@
-	<div class="container">
+	<header class="header">
 			<p class="no-result vertical-align-outer">
 				<b>Official Burn Address: </b><a href="https://etherscan.io/token/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce?a=0xdead000000000000000042069420694206942069" target="_blank"><?php echo $burnAddress ?></a>
 				<br />
@@ -12,4 +12,4 @@
 				<br />
 				<?php include ('assets/php/search.php'); ?>
 				</p>
-        </div>
+        </header>
