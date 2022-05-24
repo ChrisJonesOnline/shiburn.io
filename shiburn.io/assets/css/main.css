@@ -3,19 +3,14 @@
 */
 * {
 	font-family: Arial, Verdana, Helvetica;
-	size: 18px;
+	size: 1em;
 	line-height: 2em;
 }
 
 body {
 	/* remove default margins */
 	margin: 0% auto;
-	width: 100%;
-}
-
-p {
-	margin: 0% auto;
-	position: relative;
+	display: block;
 }
 
 a, a:active, a:before, a:after, a:visited {
@@ -23,10 +18,6 @@ a, a:active, a:before, a:after, a:visited {
 	text-decoration: none;
 } a:hover {
 	text-decoration: underline;
-}
-
-.wrapper {
-	margin: 0% auto;
 }
 
 .grid-container {
@@ -49,7 +40,7 @@ a, a:active, a:before, a:after, a:visited {
  search
 */
 .search {
-	width: min(75%, 500px);
+	width: min(33.33%, 400px);
 	padding: 6px 12px;
 	margin: 8px 0;
 	box-sizing: border-box;
@@ -67,13 +58,17 @@ verticalAlign
 	background-color: #333;
 	color: #fff;
 	width: 100% auto;
-	padding: 25px;
+	padding: 15px;
 } .header b {
 	color: #f2f2f2;
 }
 
 .footer {
-	line-height: 2;
+	margin-top: 5px;
+	background-color: #333;
+	color: #fff;
+	flex-shrink: 0;
+	padding: 1.5rem;
 	text-align: center;
 	vertical-align: middle;
 }
