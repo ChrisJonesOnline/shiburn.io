@@ -77,5 +77,4 @@
     </body>
 	<script src="assets/js/search.js"></script>
     <script src="assets/js/etherscanApi.js"></script>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
 </html>
