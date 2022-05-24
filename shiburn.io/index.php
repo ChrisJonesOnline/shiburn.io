@@ -10,7 +10,6 @@
 	<?php require_once ('assets/php/variables.php'); ?>
 
         <?php include_once ('assets/php/header.php'); ?>
-		
 		<div class="grid-container">
         <?php
         #############################
@@ -46,9 +45,6 @@
             
             echo "</div>";
         }
-        ?>
-        
-        <?php
         #################
         #START DEBUGGING#
         #################
@@ -74,6 +70,7 @@
             #echo file_get_contents($burnedSupply);
         ?>
         </div>
+		<?php include_once ('assets/php/footer.php'); ?>
     </body>
 	<script src="assets/js/search.js"></script>
     <script src="assets/js/etherscanApi.js"></script>

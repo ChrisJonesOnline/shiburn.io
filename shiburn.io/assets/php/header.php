@@ -12,4 +12,4 @@
 				<br />
 				<?php include ('assets/php/search.php'); ?>
 				</p>
-        </header>
+			</header>
