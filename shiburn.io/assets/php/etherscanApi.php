@@ -12,19 +12,10 @@ $apiKey = file_get_contents('../storage/apiKey.php');
 
 $url = "https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=" . $contractAddress . "&address=" . $burnAddress . "&page=1&offset=" . $numTransactions . "&sort=asc&apikey=" . $apiKey;
 
-##################################
-#END ETHERSCAN API REQUEST ($url)#
-##################################
-
-
 #############################################
 #START ETHERSCAN API REQUEST ($burnedSupply)#
 #############################################
 
 $burnedSupply = "https://api.etherscan.io/api?module=account&action=tokenbalance&contractaddress=" . $contractAddress . "&address=" . $burnAddress . "&tag=latest&apikey=" . $apiKey;
-
-###########################################
-#END ETHERSCAN API REQUEST ($burnedSupply)#
-###########################################
 
 ?>
