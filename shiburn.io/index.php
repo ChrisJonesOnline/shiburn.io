@@ -1,4 +1,4 @@
-<?php error_reporting(E_ERROR|E_PARSE); ?>
+<?php error_reporting(E_ERROR|E_PARSE); //disable error reporting ?>
 <html>
 <head>
     <title>shiburn.io</title>
@@ -16,9 +16,9 @@
 	]',"}
 	]",$json);
 	$jsonArray = json_decode($json, true);
-    $fullArray = $jsonArray['result']; // full array
+    $fullArray = $jsonArray['result'];
 
-    $result = $fullArray[0]; // into array 1 level deep
+    $result = $fullArray[0];
     $value = $result['value'] / 1000000000000000000;
 
     $totalSupply = '999992170305138';
@@ -32,7 +32,7 @@
     $tsNF = number_format($totalSupply);
     $tbNF = number_format($totalBurned);
     $tslNF = number_format($totalSupplyLeft);
-    $tslpNF = number_format($totalSupplyLeftPercent);
+    $tslpNF = number_format(100 - $totalSupplyLeftPercent);
     $tuvNF = number_format($totalUsdValue);
     $ntNF = number_format($numTransactions);
 
@@ -46,7 +46,7 @@
         <b>Total Burned: </b> $tbNF
         <br />
         <b>Total Supply Left: </b>$tslNF ($tslpNF%)
-        <br />		
+        <br />
         <b>Total USD Value: </b>≈ $$tuvNF 
         <br />
         <b>Total # of Burns: </b>$ntNF
@@ -92,6 +92,7 @@
     <br />
     All other trademarks and images are property of their respective owners.
     </p>
+    <script src="assets/js/search.js"></script>
 </footer>
 </body>
 </html>
