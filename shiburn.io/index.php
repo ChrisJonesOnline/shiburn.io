@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>shiburn.io</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
 <?php
@@ -21,19 +21,19 @@
     $result = $fullArray[0];
     $value = $result['value'] / 1000000000000000000;
 
+    $marketCap = '10199912949';
     $totalSupply = '999992170305138';
 	$totalBurned = $value;
 	$totalSupplyLeft = ($totalSupply - $value);
-    $totalSupplyLeftPercent = (($totalBurned / $totalSupply) * 100);
-	//todo: remove hardcoded $marketPrice (FORMULA: $marketPrice = fully diluted market cap / $totalSupply)
-	$marketPrice = '0.00001029';
+    $totalBurnedPercent = (($totalBurned / $totalSupply) * 100);
+	$marketPrice = ($marketCap / $totalSupply);
 	$totalUsdValue = ($value * $marketPrice);
 	$numTransactions = count($fullArray);
 
     $tsNF = number_format($totalSupply);
     $tbNF = number_format($totalBurned);
     $tslNF = number_format($totalSupplyLeft);
-    $tslpNF = number_format(100 - $totalSupplyLeftPercent);
+    $tbpNF = number_format($totalBurnedPercent);
     $tuvNF = number_format($totalUsdValue);
     $ntNF = number_format($numTransactions);
 
@@ -44,15 +44,13 @@
         <br />
         <b>Total Supply: </b>$tsNF
         <br />
-        <b>Total Burned: </b> $tbNF
+        <b>Total Burned: </b> $tbNF ($tbpNF%)
         <br />
-        <b>Total Supply Left: </b>$tslNF ($tslpNF%)
+        <b>Total Supply Left: </b>$tslNF
         <br />
         <b>Total USD Value: </b>≈ $$tuvNF 
         <br />
         <b>Total # of Burns: </b>$ntNF
-        <br />
-        <b>Current Market Price: </b>≈ $$marketPrice
         <br />
         <input class='search' type='text' placeholder='Search wallet address...' autocomplete='off'></input>
         <style class='search_style'></style>
@@ -60,8 +58,6 @@
        </header>
     ";
 ?>
-
-<!-- todo: format this part better/clean up shortcode -->
 
 <div class="grid-container">
 <?php
