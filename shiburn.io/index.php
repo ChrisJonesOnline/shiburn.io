@@ -25,7 +25,7 @@
 	$totalBurned = $value;
 	$totalSupplyLeft = ($totalSupply - $value);
     $totalSupplyLeftPercent = (($totalBurned / $totalSupply) * 100);
-	<!-- todo: remove hardcoded $marketPrice (FORMULA: $marketPrice = fully diluted market cap / $totalSupply)   -->
+	//todo: remove hardcoded $marketPrice (FORMULA: $marketPrice = fully diluted market cap / $totalSupply)
 	$marketPrice = '0.00001029';
 	$totalUsdValue = ($value * $marketPrice);
 	$numTransactions = count($fullArray);
