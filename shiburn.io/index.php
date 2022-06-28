@@ -1,3 +1,4 @@
+<?php error_reporting(E_ERROR|E_PARSE); //disable error reporting ?>
 <html>
 <head>
     <title>shiburn.io</title>
