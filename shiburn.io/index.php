@@ -67,7 +67,7 @@
         $date = date('l, m/d/Y, H:i:s ',$result['timeStamp']);
 		$from = $result['from'];
 		$burned = number_format($result['value'] / 1000000000000000000);
-		$usdValue = number_format(($result['value'] / 1000000000000000000) * $marketPrice);
+		$usdValue = number_format(($result['value'] / 1000000000000000000) * 0.000012);
 		$txHash = $result['hash'];
 
 		echo "
@@ -92,7 +92,6 @@
     <br />
     All other trademarks and images are property of their respective owners.
     </p>
-<script src="assets/js/search.js"></script>
 </footer>
 </body>
 </html>
