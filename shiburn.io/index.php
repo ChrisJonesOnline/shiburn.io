@@ -6,16 +6,16 @@
 </head>
 <body>
 <?php
-	$contractAddress = '0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce';
-	$burnAddress = '0xdead000000000000000042069420694206942069';
-	$numTransactions = 10000;
-	$apiKey = file_get_contents('../storage/apiKey.php');
-	$url = 'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' . $contractAddress . '&address=' . $burnAddress . '&page=1&offset=' . $numTransactions . '&tag=latest&apikey=' . $apiKey;
-	$json = file_get_contents($url);
-	$json = str_replace('},
-	]',"}
-	]",$json);
-	$jsonArray = json_decode($json, true);
+    $contractAddress = '0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce';
+    $burnAddress = '0xdead000000000000000042069420694206942069';
+    $numTransactions = 10000;
+    $apiKey = file_get_contents('../storage/apiKey.php');
+    $url = 'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' . $contractAddress . '&address=' . $burnAddress . '&page=1&offset=' . $numTransactions . '&tag=latest&apikey=' . $apiKey;
+    $json = file_get_contents($url);
+    $json = str_replace('},
+    ]',"}
+    ]",$json);
+    $jsonArray = json_decode($json, true);
     $fullArray = $jsonArray['result'];
 
     $result = $fullArray[0];
@@ -23,12 +23,12 @@
 
     $marketCap = '10199912949';
     $totalSupply = '999992170305138';
-	$totalBurned = $value;
-	$totalSupplyLeft = ($totalSupply - $value);
+    $totalBurned = $value;
+    $totalSupplyLeft = ($totalSupply - $value);
     $totalBurnedPercent = (($totalBurned / $totalSupply) * 100);
-	$marketPrice = ($marketCap / $totalSupply);
-	$totalUsdValue = ($value * $marketPrice);
-	$numTransactions = count($fullArray);
+    $marketPrice = ($marketCap / $totalSupply);
+    $totalUsdValue = ($value * $marketPrice);
+    $numTransactions = count($fullArray);
 
     $tsNF = number_format($totalSupply);
     $tbNF = number_format($totalBurned);
