@@ -44,11 +44,11 @@
         <br />
         <b>Total Supply: </b>$tsNF
         <br />
-        <b>Total Supply Left: </b>$tslNF
-        <br />
 	<b>Total Burned: </b> $tbNF ($tbpNF%)
         <br />
-        <b>Total USD Value: </b>≈ $$tuvNF 
+        <b>Total Remaining: </b>$tslNF
+        <br />
+        <b>Total USD Value: </b>≈ $$tuvNF
         <br />
         <b>Total # of Burns: </b>$ntNF
         <br />
