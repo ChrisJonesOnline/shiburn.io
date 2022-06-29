@@ -34,6 +34,7 @@
     $tbNF = number_format($totalBurned);
     $tslNF = number_format($totalSupplyLeft);
     $tbpNF = number_format($totalBurnedPercent);
+    $tslpNF = number_format(100 - $totalBurnedPercent);
     $tuvNF = number_format($totalUsdValue);
     $ntNF = number_format($numTransactions);
 
@@ -42,11 +43,11 @@
         <p class='no-result vertical-align-outer'>
         <b>Official Burn Address: </b><a href='https://etherscan.io/token/0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce?a=0xdead000000000000000042069420694206942069' target='_blank'>$burnAddress</a>
         <br />
-        <b>Total Supply: </b>$tsNF
+        <b>Total Supply: </b>$tsNF (100%)
         <br />
 	<b>Total Burned: </b> $tbNF ($tbpNF%)
         <br />
-        <b>Total Remaining: </b>$tslNF
+        <b>Total Remaining: </b>$tslNF ($tslpNF%)
         <br />
         <b>Total USD Value: </b>≈ $$tuvNF
         <br />
