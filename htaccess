@@ -3,17 +3,11 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php
 
-###Force HTTPS###
-
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-###IP Canonicalization###
-
 RewriteCond %{HTTP_HOST} ^208\.97\.177\.160
 RewriteRule (.*) https://shiburn.io/$1 [R=301,L]
-
-###End IP Canonicalization###
 
 RewriteCond %{PHP_HOST}   !^www\.shiburn\.io [NC]
 RewriteCond %{PHP_HOST}   !^$
