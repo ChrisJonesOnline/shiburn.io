@@ -9,7 +9,7 @@
     $contractAddress = '0x95ad61b0a150d79219dcf64e1e6cc01f0b64c4ce';
     $burnAddress = '0xdead000000000000000042069420694206942069';
     $numTransactions = 10000;
-    $apiKey = 'YOUR_API_KEY');
+    $apiKey = 'YOUR_API_KEY';
     $url = 'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' . $contractAddress . '&address=' . $burnAddress . '&page=1&offset=' . $numTransactions . '&tag=latest&apikey=' . $apiKey;
     $json = file_get_contents($url);
     $json = str_replace('},
