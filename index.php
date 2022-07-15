@@ -21,7 +21,7 @@
     $result = $fullArray[0];
     $value = $result['value'] / 1000000000000000000;
 
-    $marketCap = '10399910578';
+    $marketCap = '10929905897';
     $totalSupply = '999992170305138';
     $totalBurned = $value;
     $totalSupplyLeft = ($totalSupply - $value);
