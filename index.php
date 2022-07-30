@@ -22,7 +22,7 @@
     $value = $result['value'] / 1000000000000000000;
 
     $marketCap = '11809897403.66';
-    $totalSupply = '999992170305138';
+    $totalSupply = '999991312756761.40';
     $totalBurned = $value;
     $totalSupplyLeft = ($totalSupply - $value);
     $totalBurnedPercent = (($totalBurned / $totalSupply) * 100);
