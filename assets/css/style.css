@@ -21,6 +21,7 @@ a, a:active, a:before, a:after, a:visited {
 }
 
 .grid-container {
+	margin: .5em;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -45,6 +46,8 @@ a, a:active, a:before, a:after, a:visited {
 	margin: 8px 0;
 	box-sizing: border-box;
 	outline: none;
+	border: none;
+	border-radius: 1.5em;
 }
 
 .search_style {
@@ -61,16 +64,6 @@ verticalAlign
 	padding: 15px;
 } .header b {
 	color: #f2f2f2;
-}
-
-.footer {
-	margin-top: 5px;
-	background-color: #333;
-	color: #fff;
-	flex-shrink: 0;
-	padding: 1.5rem;
-	text-align: center;
-	vertical-align: middle;
 }
 
 .no-result {
