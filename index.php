@@ -21,12 +21,12 @@
     $result = $fullArray[0];
     $value = $result['value'] / 1000000000000000000;
 
-    $marketCap = '13039885411.33';
+    $dilutedMarketCap = '9509832492.70';
     $totalSupply = '999991312756761.40';
     $totalBurned = $value;
     $totalSupplyLeft = ($totalSupply - $value);
     $totalBurnedPercent = (($totalBurned / $totalSupply) * 100);
-    $marketPrice = ($marketCap / $totalSupply);
+    $marketPrice = ($dilutedMarketCap / $totalSupply);
     $totalUsdValue = ($value * $marketPrice);
     $numTransactions = count($fullArray);
 
@@ -37,7 +37,7 @@
     $tslpNF = number_format(100 - $totalBurnedPercent);
     $tuvNF = number_format($totalUsdValue);
     $ntNF = number_format($numTransactions);
-
+	
     echo "
     <header class='header'>
         <p class='no-result vertical-align-outer'>
@@ -45,7 +45,7 @@
         <br />
         <b>Total Supply: </b>$tsNF (100%)
         <br />
-	<b>Total Burned: </b> $tbNF ($tbpNF%)
+		<b>Total Burned: </b> $tbNF ($tbpNF%)
         <br />
         <b>Total Remaining: </b>$tslNF ($tslpNF%)
         <br />
@@ -85,14 +85,6 @@
 	}
 ?>
 </div>
-
-<footer class="footer">
-    <p>
-    &copy; <?php echo date("Y"); ?> shiburn.io | All Rights Reserved.
-    <br />
-    All other trademarks and images are property of their respective owners.
-    </p>
     <script src="assets/js/search.js"></script>
-</footer>
 </body>
 </html>
