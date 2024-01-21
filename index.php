@@ -21,7 +21,7 @@
     $result = $fullArray[0];
     $value = $result['value'] / 1000000000000000000;
 
-    $dilutedMarketCap = '9509832492.70';
+    $dilutedMarketCap = '9509832492.70'; //api call available to pro etherscan accounts
     $totalSupply = '999991312756761.40';
     $totalBurned = $value;
     $totalSupplyLeft = ($totalSupply - $value);
